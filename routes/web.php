@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controller\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,4 +26,5 @@ Route::group(['prefix'=>'admin'],function(){
     return'admin dashboard';
 });
 });
-    
+
+Route::get('home',[HomeController::class,'index'])->name('home.index');
